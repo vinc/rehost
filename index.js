@@ -17,14 +17,11 @@ module.exports = function(options) {
     var height = Number(geo[2]) || null;
     var crop = geo[3] == '!';
 
-    var resizer = sharp().
-      resize(width, height).
-      sharpen().
-      withoutEnlargement();
-
+    var config = { withoutEnlargement: true };
     if (!crop) {
-      resizer = resizer.max();
+      config.canvas = 'max';
     }
+    var resizer = sharp().resize(width, height, config).sharpen();
 
     switch (req.params.ext) {
     case 'jpg':
