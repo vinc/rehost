@@ -1,7 +1,7 @@
 {
   "name": "rehost",
   "description": "Express middleware to rehost and resize images",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0-beta",
   "author": "Vincent Ollivier <v@vinc.cc> (https://vinc.cc)",
   "license": "MIT",
   "repository": "vinc/rehost",
